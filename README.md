@@ -35,7 +35,7 @@ Esto abrirá una ventana en el navegador con nuestra página.
 
 Siguiendo estos pasos, ya se ha levantado tu primer servicio con Kubernetes.
 
-Si desea sumar un extra y agergar funcionalidad al archivo ingress, haga lo siguiente:
+Si desea sumar un extra y agregar funcionalidad al archivo ingress, haga lo siguiente:
 - minikube addons enable ingress (es normal que tarde)
 
 Luego, haremos un "kubectl apply -f ." como hicimos con los manifiestos anteriormente, pero en la carpeta ingress.
@@ -46,4 +46,4 @@ Una vez hecho esto, debemos obtener la IP de Minikube con el siguiente comando
 Por último, debemos configurar a la máquina para que no solo se pueda acceder desde el puesto, sino también por una URL propia:
 - echo "192.168.49.2 local.service" | sudo tee -a /etc/hosts
 
-Siguiendo estos pasos, el ingress queda correctamente configurado.
+Siguiendo estos pasos, el ingress queda correctamente configurado. Pruebe abriendo su navegador y buscando "http://local.service".
