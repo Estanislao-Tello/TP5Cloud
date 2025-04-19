@@ -8,12 +8,12 @@ Luego de haber descargado todo, creamos una carpeta y nos dirigimos a ella utili
 Dentro de ella:
 - git init
 - git clone https://github.com/Estanislao-Tello/TP5Cloud.git
-- git clone https://github.com/Estanislao-Tello/Personal-LP.git
+- git clone https://github.com/Estanislao-Tello/static-website.git
 
 --------------------------------------
 
 Luego, levantamos Minikube
-- minikube start --mount --mount-string="/home/lao/TP5Cloud/Personal-LP:/mnt/web"
+- minikube start --mount --mount-string="/home/lao/TP5Cloud/static-website:/mnt/web"
 
 A continuación, creamos los manifiestos:
 - cd /home/lao/TP5Cloud
@@ -28,7 +28,7 @@ Nuestro pod debería estar levantándose. Podemos ver el estado del mismo con:
 - kubectl get pods 
 El nombre será: static-site-XXX-XXX. El estado será Pending, ContainerCreating y por último Running.
 
-Una vez en Running, podremos levantar el servicio con nuestro .html con el siguiente script:
+Una vez en Running, podremos levantar el servicio con nuestro .html con el siguiente comando:
 - minikube service static-site-service
 
 Esto abrirá una ventana en el navegador con nuestra página.
